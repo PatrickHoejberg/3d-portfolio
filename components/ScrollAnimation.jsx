@@ -83,7 +83,7 @@ export default function ScrollAnimation() {
       <Canvas
         camera={{ position: [0, 0, 6], fov: 10 }}
         gl={{ alpha: true }}
-        style={{ position: 'fixed', top: 0, left: 0, zIndex: 100, pointerEvents: 'none', background: 'transparent' }}
+        style={{ position: 'fixed', top: 0, left: 0, zIndex: 10, pointerEvents: 'none', background: 'transparent' }}
       >
         <ambientLight intensity={1.3} />
         <directionalLight position={[-10, 0, 8]} intensity={2} />
