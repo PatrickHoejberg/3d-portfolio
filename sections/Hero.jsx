@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo } from 'react'
 import { words } from '../constants/index.js'
+import { CursorDrivenParticleTypography } from '@/components/ui/cursor-driven-particle-typography'
 
 const Hero = () => {
   console.log('[Hero] render')
@@ -62,7 +63,7 @@ const Hero = () => {
       }
     },
     interactivity: {
-      detect_on: 'canvas',
+      detect_on: 'window',
       events: {
         onhover: {
           enable: true,
@@ -183,7 +184,7 @@ const Hero = () => {
       id='hero'
       className='relative overflow-hidden z-20'
       style={{
-        minHeight: '80vh',
+        minHeight: '100vh',
         backgroundImage: "url('/img/bg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -192,8 +193,14 @@ const Hero = () => {
     >
       <div id='particles-js' className='absolute inset-0 pointer-events-auto' style={{ zIndex: 25 }} />
 
-      <div className='hero-layout'>
-        {/* Hero content removed - particle background only */}
+      <div className='hero-layout relative flex items-center justify-center min-h-[80vh]' style={{ zIndex: 30 }}>
+        <div className='w-full max-w-5xl mx-auto px-6 relative min-h-[300px] md:min-h-[400px]'>
+          <CursorDrivenParticleTypography
+            text='Patrick S. Højberg'
+            fontSize={120}
+            className='w-full h-full text-white'
+          />
+        </div>
       </div>
     </section>
   )
